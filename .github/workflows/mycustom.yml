@@ -30,7 +30,7 @@ jobs:
       run: |
         cd ..
         curl -L -o mingw1310.7z https://download.qt.io/online/qtsdkrepository/windows_x86/desktop/tools_mingw1310/qt.tools.win64_mingw1310/13.1.0-202407240918mingw1310.7z
-        7z x mingw1310.7z -o./mingw1310_64
+        7z x mingw1310.7z -oD:\a\buildQt\mingw1310_64
 
     - name: Setup Ninja
       run: |
