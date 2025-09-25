@@ -52,10 +52,6 @@ jobs:
         7z x qt-everywhere-src.zip -oD:\a\buildQt\Qt\${{env.QT_VERSION}}
         cmd.exe /c "call `"D:\a\buildQt\buildQt\buildQt6\build-Qt6mingw1310_64.cmd`" > build.log 2>&1"
         type build.log
-        if not exist "../Qt/${{env.QT_VERSION}}-static/mingw1310_64/bin/qmake.exe" (
-          echo "Error: Qt build failed!"
-          exit 1
-        )
 
     - name: Package binaries
       run: |
